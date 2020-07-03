@@ -1,0 +1,28 @@
+img{
+	max-width: 100%;
+	border-radius: 10px;
+}
+.quitar-float{
+	float: none;
+}
+.espacio-arriba{
+	margin-top: 30px;
+}
+.Pt-serif{
+	font-family: 'PT Serif', serif;
+}
+.grande{
+	font-size: 5em;
+}
+.letra{
+	font-size: 1.5em;
+}
+.linea{
+	border-top-style: solid;
+	border-width: 1px;
+}
+.borde-boton{
+	border-style: solid;
+	border-color: #260101;
+	border-width: 2px;
+}

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Interfaz de prueba</title>
+	<title>Manejo de hardware</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap">
@@ -23,14 +23,16 @@
 		</div>
 	</div>
 	<br><br>
-	<div class="row">
-		<div class="col-md-6 center-block quitar-float text-center">
-			<button type="submit" name="Encender" id="calcular" class="borde-boton" style="width: 90px; height: 40px"> Encender</button> 
+	<form action="Interfaz.php" method="get" name="led">
+		<div class="row">
+			<div class="col-md-6 center-block quitar-float text-center">
+				<input  type="submit" name="led" value="Encender" class="borde-boton" style="width: 90px; height: 40px">
+			</div>
+			<div class="col-md-6 center-block quitar-float text-center">
+				<input type="submit" name="led" value="Apagar" class="borde-boton" style="width: 90px; height: 40px">
+			</div>
 		</div>
-		<div class="col-md-6 center-block quitar-float text-center">
-			<button type="submit" name="Apagar" id="calcular" class="borde-boton" style="width: 90px; height: 40px"> Apagar</button> 
-		</div>
-	</div>
+	</form>
 	<div class="row">
 		<div class="col-md-12 center-block quitar-float text-center">
 			<br><br>
@@ -40,7 +42,9 @@
 	<br><br>
 	<div class="row">
 		<div class="col-md-6 center-block quitar-float text-center">
-			<button type="submit" name="Leer" id="calcular" class="borde-boton" style="width: 90px; height: 40px"> Medir</button> 
+			<form action="Interfaz.php" method="get" name="adc">
+					<input type="submit" name="adc" value="Medir" class="borde-boton" style="width: 90px; height: 40px"> 
+			</form>
 		</div>
 		<div class="col-md-6 center-block quitar-float text-center letra">
 			<p><strong>El voltaje es: </strong></p>
