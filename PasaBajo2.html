@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Laboratorio remoto</title>
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap">
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin=anonymous"></script>
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>Laboratorio remoto</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap">
+	</head>
 	<body>
 		<div class="row espacio-arriba">
 			<div class="col-md-12 center-block text-center quitar-float">
@@ -20,22 +18,17 @@
 				<img src="Im/PasaBajo2.png" class="col-md-11 borde-img">
 			</div>
 			<div class="col-md-6 quitar-float center-block text-center">
-				<form>
+				<form action="PasaBajo2.php" method="get" name="res">
 					<br><br><br><br><br><br>
 					<label for="R1" class="letra"><strong>R1:&nbsp;&nbsp;</strong></label>
   					<input type="text" id="R1" name="R1" class="borde-boton" size="30"><br><br>
   					<label for="R2" class="letra"><strong>R2:&nbsp;&nbsp;</strong></label>
-  					<input type="text" id="R2" name="R2" class="borde-boton" size="30"><br><br>
+					<input type="text" id="R2" name="R2" class="borde-boton" size="30"><br><br>
+					<input type="submit" class="borde-boton" style="width: 90px; height: 40px">
 				</form>
-				<button type="submit" name="Calcular" id="calcular" class="borde-boton" style="width: 90px; height: 40px"> Calcular</button> 
 			</div>
 		</div>
 		<br><br>
-		<div class="container espacio-arriba">
-			<div class="row">
-				<div id="grafica" class="col-md-12 desactivar center-block text-center"></div>
-			</div>
-		</div>
 		<div class="row espacio-arriba">
 			<div class="col-md-6">
 				<nav>
@@ -58,10 +51,4 @@
 			</div>
 		</div>
 	</body>
-	<script src="js/Aparecer.js"></script>
 </html>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('#grafica').load('lineal.php');
-	});
-</script>

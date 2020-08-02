@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Pot"
+
+echo out > /sys/class/gpio/gpio27//direction
+echo out > /sys/class/gpio/gpio47//direction
+
+
+
+
