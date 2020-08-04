@@ -5,19 +5,14 @@
 	$result = mysqli_query($conexion,$sql);
 	$valoresY = array();//montos
 	$valoresX = array();//fechas
-
 	while($ver = mysqli_fetch_row($result)){
 		$valoresY[] = $ver[1];
 		$valoresX[] = $ver[0];
 	}
-
 	$datosX = json_encode($valoresX);
 	$datosY = json_encode($valoresY);
 ?>
-
-<div id="graficaLineal" class="borde-img text-center center-block quitar-float inline-block"></div>
-
-
+<div id="graficaLineal" class="borde-img text-center"></div>
 <script type="text/javascript">
 	function crearCadenaLineal(json){
 		var parsed = JSON.parse(json);
@@ -28,7 +23,6 @@
 		return arr;
 	}
 </script>
-
 <script type="text/javascript">
 	datosX = crearCadenaLineal('<?php echo $datosX ?>');
 	datosY = crearCadenaLineal('<?php echo $datosY ?>');
@@ -38,7 +32,7 @@
 	  type: 'scatter',
 	  line: {
 	      color: 'green',
-	      width: 2
+	      width: 2,
       },
       marker: {
 	    color: 'green',
