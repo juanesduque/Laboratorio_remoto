@@ -1,14 +1,35 @@
 <?php
 
 	system("echo out > /sys/class/gpio/gpio27/direction");
+	system("echo out > /sys/class/gpio/gpio47/direction");
+	system("echo out > /sys/class/gpio/gpio45/direction");
+	system("echo out > /sys/class/gpio/gpio69/direction");
+	system("echo out > /sys/class/gpio/gpio66/direction");
+	system("echo out > /sys/class/gpio/gpio67/direction");
 	$R1 = $_GET["R1"];
-
-	for ($i = 1; $i <= $R1; $i++) {
+	$frecuencia = $_GET["frecuencia"];
+	system("echo 0 > /sys/class/gpio/gpio45/value");
+	system("echo 0 > /sys/class/gpio/gpio67/value");
+	system("echo 0 > /sys/class/gpio/gpio47/value");	
+	system("echo 0 > /sys/class/gpio/gpio66/value");
+	for($i = 0; $i <= 100; $i++){
 		system("echo 1 > /sys/class/gpio/gpio27/value");
-		sleep(1);
+		system("echo 1 > /sys/class/gpio/gpio69/value");
 		system("echo 0 > /sys/class/gpio/gpio27/value");
-		sleep(1);
+		system("echo 0 > /sys/class/gpio/gpio69/value");
 	}
+	system("echo 1 > /sys/class/gpio/gpio47/value");	
+	system("echo 1 > /sys/class/gpio/gpio66/value");
+	for($i = 1; $i <= $R1; $i++){
+		system("echo 1 > /sys/class/gpio/gpio27/value");
+		system("echo 0 > /sys/class/gpio/gpio27/value");
+	}
+	for($i = 1; $i <= $frecuencia; $i++){
+		system("echo 1 > /sys/class/gpio/gpio69/value");
+		system("echo 0 > /sys/class/gpio/gpio69/value");
+	}
+	system("echo 1 > /sys/class/gpio/gpio45/value");
+	system("echo 1 > /sys/class/gpio/gpio67/value");
 
 ?>
 
