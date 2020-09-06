@@ -1,33 +1,33 @@
 create database graficos;
  use graficos;
 
-DROP TABLE IF EXISTS `ventas`;
+DROP TABLE IF EXISTS `tabla`;
 
-CREATE TABLE `ventas` (
-  `id_venta` int(11) NOT NULL AUTO_INCREMENT,
-  `fechaVenta` date DEFAULT NULL,
-  `montoVenta` float DEFAULT NULL,
-  PRIMARY KEY (`id_venta`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+CREATE TABLE `tabla` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `frecuencia` float DEFAULT NULL,
+  `amplitud` float DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO `ventas` VALUES (1,'2017-05-05',10000),
-       (2,'2017-07-09',12000),
-       (3,'2017-09-20',20000),
-       (4,'2018-01-01',50000),
-       (5,'2018-01-25',8000),
-       (6,'2018-02-14',10000),
-       (7,'2018-05-12',11000),
-       (8,'2018-06-23',9000),
-       (9,'2018-09-14',12000),
-       (10,'2018-10-02',18000),
-       (11,'2018-12-25',13000),
-       (12,'2019-01-07',10000),
-       (13,'2019-02-11',11000),
-       (14,'2019-03-22',15000),
-       (15,'2019-04-05',20000),
-       (16,'2019-04-30',17000),
-       (17,'2019-05-08',19000),
-       (18,'2019-05-29',10000),
-       (19,'2019-06-25',11000),
-       (20,'2019-07-25',18000);
+INSERT INTO `tabla` VALUES (1,100,0),
+       (2,200,0.1),
+       (3,300,0.2),
+       (4,400,0.3),
+       (5,500,0.4),
+       (6,600,0.5),
+       (7,700,0.4),
+       (8,800,0.3),
+       (9,900,0.2),
+       (10,1000,0.1),
+       (11,1100,0),
+       (12,1200,0.1),
+       (13,1300,0.2),
+       (14,1400,0.3),
+       (15,1500,0.4),
+       (16,1600,0.5),
+       (17,1700,0.4),
+       (18,1800,0.3),
+       (19,1900,0.2),
+       (20,2000,0.1);

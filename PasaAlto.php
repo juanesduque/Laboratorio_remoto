@@ -1,3 +1,9 @@
+<?php
+
+	system("echo out > /sys/class/gpio/gpio60/direction");
+	system("echo 1 > /sys/class/gpio/gpio60/value");
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,28 +16,28 @@
 	<body>
 		<div class="row">
 			<div class="col-md-12 text-center Pt-serif">
-				<h1 class="grande">Filtro pasa bajo</h1>	
-				<p>Un filtro paso bajo corresponde a un filtro electrónico caracterizado por permitir el paso de las frecuencias más bajas y atenuar las frecuencias más altas.​ El filtro requiere de dos terminales de entrada y dos de salida, de una caja negra, también denominada cuadripolo o bipuerto, así todas las frecuencias se pueden presentar a la entrada, pero a la salida solo estarán presentes las que permita pasar el filtro.</p>
+				<h1 class="grande">Filtro pasa alto</h1><br>
+				<p>Un filtro paso alto (HPF) es un tipo de filtro electrónico en cuya respuesta en frecuencia se atenúan los componentes de baja frecuencia pero no los de alta frecuencia, éstas incluso pueden amplificarse en los filtros activos. La alta o baja frecuencia es un término relativo que dependerá del diseño y de la aplicación.</p>
 			</div>
 		</div>
 		<div class="row espacio-arriba">
 			<div class="col-md-6 text-center">
-				<img src="Im/PasaBajo1.png" class="borde-img" style="width: 450px; height: 300px;">
+				<img src="Im/PasaAlto1.jpg" class="borde-img" style="width: 450px; height: 300px;">
 			</div>
 			<div class="col-md-6 text-center">
-				<img src="Im/PasaBajo2.png" class="borde-img" style="width: 450px; height: 300px;">
+				<img src="Im/PasaAlto.jpg" class="borde-img" style="width: 450px; height: 300px;">
 			</div>
 		</div>
 		<div class="row">
 			<nav class="col-md-6 text-center">
-				<a href="PasaBajo1.html"><strong>Primer orden</strong></a>
+				<a href="PasaAlto10.php"><strong>Primer orden</strong></a>
 			</nav>
 			<nav class="col-md-6 text-center">
-				<a href="PasaBajo2.html"><strong>Segundo orden</strong></a>
+				<a href="PasaAlto20.php"><strong>Segundo orden</strong></a>
 			</nav>
 		</div>
 		<div class="row">
-			<nav class="col-md-12">
+			<nav class="col-md-1">
 				<a href="index.html" class="espacio-izquierda">Atrás</a>
 			</nav>
 		</div>

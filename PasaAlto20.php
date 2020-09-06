@@ -1,3 +1,13 @@
+<?php
+
+	system("echo out > /sys/class/gpio/gpio50/direction");
+	system("echo out > /sys/class/gpio/gpio2/direction");
+	system("echo out > /sys/class/gpio/gpio14/direction");
+	system("echo 0 > /sys/class/gpio/gpio50/value");
+	system("echo 0 > /sys/class/gpio/gpio2/value");
+	system("echo 1 > /sys/class/gpio/gpio14/value");
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,30 +20,32 @@
 	<body>
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1 class="Pt-serif grande">Filtro pasa alto de primer orden</h1>
+				<h1 class="Pt-serif grande">Filtro pasa alto de segundo orden</h1>
 			</div>
 		</div>
 		<div class="row espacio-arriba">
 			<div class="col-md-6 text-right">
-				<img src="Im/PasaAlto1.png" class="borde-img" style="width: 600px; height: 350px;">
+				<img src="Im/PasaAlto.jpg" class="borde-img" style="width: 600px; height: 350px;">
 			</div>
 			<div class="col-md-6 text-center">
-				<form action="PasaAlto1.php" method="get" name="res">
-					<br><br><br>
-					<label for="R1" class="letra"><strong>R1(K&#8486;):&nbsp;&nbsp;</strong></label>
-					<input type="text" name="R1" class="borde-boton" size="30"><br><br>
+				<form action="PasaAlto2.php" method="get" name="res">
+					<br><br>
+					<label for="R1" class="letra"><strong>R1(k&#8486;):&nbsp;&nbsp;</strong></label>
+  					<input type="text" name="R1" class="borde-boton" size="30"><br><br>
+  					<label for="R2" class="letra"><strong>R2(k&#8486;):&nbsp;&nbsp;</strong></label>
+					<input type="text" name="R2" class="borde-boton" size="30"><br><br>
 					<label for="frecuencia" class="letra"><strong>F(Hz):&nbsp;&nbsp;</strong></label>
 					<input type="text" name="frecuencia" class="borde-boton" size="30"><br><br>
 					<input type="submit" class="borde-boton" style="width: 90px; height: 40px">
-				</form>
+				</form> 
 			</div>
 		</div>
 		<div class="row espacio-arriba">
 			<nav class="col-md-6">
-				<a href="PasaAlto.html" class="espacio-izquierda">Atrás</a>
+				<a href="PasaAlto.php" class="espacio-izquierda">Atrás</a>
 			</nav>
 			<nav class="col-md-6 text-right">
-				<a href="index.html">Página Principal &nbsp;&nbsp;</a>
+				<a href="index.html">Página principal &nbsp;&nbsp;</a>
 			</nav>
 		</div>
 		<br>

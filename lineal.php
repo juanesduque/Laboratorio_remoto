@@ -1,7 +1,7 @@
 <?php
 	require_once "php/conexion.php";
 	$conexion = conexion();
-	$sql = "SELECT fechaVenta,montoVenta from ventas";
+	$sql = "SELECT frecuencia,amplitud from tabla";
 	$result = mysqli_query($conexion,$sql);
 	$valoresY = array();//montos
 	$valoresX = array();//fechas
@@ -40,12 +40,12 @@
 	  }
 	};
 	var layout = {
-	  title: 'Gráfica lineal',
+	  title: 'Amplitud vs frecuencia',
 	  xaxis: {
-	    title: 'Fechas'
+	    title: 'Frecuencia'
 	  },
 	  yaxis: {
-	    title: 'Montos'
+	    title: 'Amplitud'
 	  }
 	};
 	var data = [trace1];

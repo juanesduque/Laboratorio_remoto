@@ -1,8 +1,14 @@
+<?php
+
+	system("echo out > /sys/class/gpio/gpio60/direction");
+	system("echo 0 > /sys/class/gpio/gpio60/value");
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Laboratorio remoto de filtros</title>
+		<title>Laboratorio remoto</title>
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap">
@@ -10,27 +16,27 @@
 	<body>
 		<div class="row">
 			<div class="col-md-12 text-center Pt-serif">
-				<h1 class="grande">Filtro pasa banda</h1>
-				<p>Un filtro paso banda es un tipo de filtro electrónico que deja pasar un determinado rango de frecuencias de una señal y atenúa el paso del resto.</p>
+				<h1 class="grande">Filtro pasa bajo</h1>	
+				<p>Un filtro paso bajo corresponde a un filtro electrónico caracterizado por permitir el paso de las frecuencias más bajas y atenuar las frecuencias más altas.​ El filtro requiere de dos terminales de entrada y dos de salida, de una caja negra, también denominada cuadripolo o bipuerto, así todas las frecuencias se pueden presentar a la entrada, pero a la salida solo estarán presentes las que permita pasar el filtro.</p>
 			</div>
-		</div>
+		</div>	
 		<div class="row espacio-arriba">
 			<div class="col-md-6 text-center">
-				<img src="Im/PasaBanda1.png" class="borde-img" style="width: 450px; height: 300px;">
+				<img src="Im/PasaBajo1.jpg" class="borde-img" style="width: 450px; height: 300px;">
 			</div>
 			<div class="col-md-6 text-center">
-				<img src="Im/PasaBanda2.png" class="borde-img" style="width: 450px; height: 300px;">
+				<img src="Im/PasaBajo.jpg" class="borde-img" style="width: 450px; height: 300px;">
 			</div>
 		</div>
 		<div class="row">
 			<nav class="col-md-6 text-center">
-				<a href="PasaBanda1.html"><strong>Primer orden</strong></a>
+				<a href="PasaBajo10.php"><strong>Primer orden</strong></a>
 			</nav>
 			<nav class="col-md-6 text-center">
-				<a href="PasaBanda2.html"><strong>Segundo orden</strong></a>
+				<a href="PasaBajo20.php"><strong>Segundo orden</strong></a>
 			</nav>
 		</div>
-		<div class="row espacio-arriba">
+		<div class="row">
 			<nav class="col-md-12">
 				<a href="index.html" class="espacio-izquierda">Atrás</a>
 			</nav>

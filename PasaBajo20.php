@@ -1,8 +1,18 @@
+<?php
+
+	system("echo out > /sys/class/gpio/gpio4/direction");
+	system("echo out > /sys/class/gpio/gpio15/direction");
+	system("echo out > /sys/class/gpio/gpio14/direction");
+	system("echo 0 > /sys/class/gpio/gpio4/value");
+	system("echo 0 > /sys/class/gpio/gpio15/value");
+	system("echo 0 > /sys/class/gpio/gpio14/value");
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Laboratorio remoto</title>
+		<title>Laboratorio remoto de filtros</title>
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap">
@@ -10,32 +20,32 @@
 	<body>
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1 class="Pt-serif grande">Filtro pasa alto de segundo orden</h1>
+				<h1 class="Pt-serif grande">Filtro pasa bajo de segundo orden</h1>
 			</div>
 		</div>
 		<div class="row espacio-arriba">
 			<div class="col-md-6 text-right">
-				<img src="Im/PasaAlto2.png" class="borde-img" style="width: 600px; height: 350px;">
+				<img src="Im/PasaBajo.jpg" class="borde-img" style="width: 600px; height: 350px;">
 			</div>
 			<div class="col-md-6 text-center">
-				<form action="PasaAlto2.php" method="get" name="res">
+				<form action="PasaBajo2.php" method="get" name="res">
 					<br><br>
 					<label for="R1" class="letra"><strong>R1(k&#8486;):&nbsp;&nbsp;</strong></label>
-  					<input type="text" name="R1" class="borde-boton" size="30"><br><br>
+  					<input type="text" id="R1" name="R1" class="borde-boton" size="30"><br><br>
   					<label for="R2" class="letra"><strong>R2(k&#8486;):&nbsp;&nbsp;</strong></label>
-					<input type="text" name="R2" class="borde-boton" size="30"><br><br>
+					<input type="text" id="R2" name="R2" class="borde-boton" size="30"><br><br>
 					<label for="frecuencia" class="letra"><strong>F(Hz):&nbsp;&nbsp;</strong></label>
 					<input type="text" name="frecuencia" class="borde-boton" size="30"><br><br>
 					<input type="submit" class="borde-boton" style="width: 90px; height: 40px">
-				</form> 
+				</form>
 			</div>
 		</div>
 		<div class="row espacio-arriba">
 			<nav class="col-md-6">
-				<a href="PasaAlto.html" class="espacio-izquierda">Atrás</a>
+				<a href="PasaBajo.php" class="espacio-izquierda">Atrás</a>
 			</nav>
 			<nav class="col-md-6 text-right">
-				<a href="index.html">Página principal &nbsp;&nbsp;</a>
+				<a href="index.html" class="espacio-izquierda">Página Principal &nbsp;&nbsp;</a>
 			</nav>
 		</div>
 		<br>

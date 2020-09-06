@@ -1,35 +1,35 @@
 <?php
 
+	system("echo out > /sys/class/gpio/gpio22/direction");
 	system("echo out > /sys/class/gpio/gpio27/direction");
 	system("echo out > /sys/class/gpio/gpio47/direction");
+	system("echo out > /sys/class/gpio/gpio23/direction");
 	system("echo out > /sys/class/gpio/gpio45/direction");
 	system("echo out > /sys/class/gpio/gpio69/direction");
-	system("echo out > /sys/class/gpio/gpio66/direction");
-	system("echo out > /sys/class/gpio/gpio67/direction");
 	$R1 = $_GET["R1"];
-	$frecuencia = $_GET["frecuencia"];
+	$f = $_GET["frecuencia"];
+	system("echo 0 > /sys/class/gpio/gpio47/value");
+	system("echo 0 > /sys/class/gpio/gpio69/value");
+	system("echo 0 > /sys/class/gpio/gpio27/value");
 	system("echo 0 > /sys/class/gpio/gpio45/value");
-	system("echo 0 > /sys/class/gpio/gpio67/value");
-	system("echo 0 > /sys/class/gpio/gpio47/value");	
-	system("echo 0 > /sys/class/gpio/gpio66/value");
 	for($i = 0; $i <= 100; $i++){
-		system("echo 1 > /sys/class/gpio/gpio27/value");
-		system("echo 1 > /sys/class/gpio/gpio69/value");
-		system("echo 0 > /sys/class/gpio/gpio27/value");
-		system("echo 0 > /sys/class/gpio/gpio69/value");
+		system("echo 1 > /sys/class/gpio/gpio22/value");
+		system("echo 1 > /sys/class/gpio/gpio23/value");
+		system("echo 0 > /sys/class/gpio/gpio22/value");
+		system("echo 0 > /sys/class/gpio/gpio23/value");
 	}
-	system("echo 1 > /sys/class/gpio/gpio47/value");	
-	system("echo 1 > /sys/class/gpio/gpio66/value");
-	for($i = 1; $i <= $R1; $i++){
-		system("echo 1 > /sys/class/gpio/gpio27/value");
-		system("echo 0 > /sys/class/gpio/gpio27/value");
-	}
-	for($i = 1; $i <= $frecuencia; $i++){
-		system("echo 1 > /sys/class/gpio/gpio69/value");
-		system("echo 0 > /sys/class/gpio/gpio69/value");
-	}
+	system("echo 1 > /sys/class/gpio/gpio27/value");
 	system("echo 1 > /sys/class/gpio/gpio45/value");
-	system("echo 1 > /sys/class/gpio/gpio67/value");
+	for($i = 1; $i <= $f; $i++){
+                system("echo 1 > /sys/class/gpio/gpio22/value");
+                system("echo 0 > /sys/class/gpio/gpio22/value");
+        }
+	system("echo 1 > /sys/class/gpio/gpio47/value");
+	for($i = 1; $i <= $R1; $i++){
+		system("echo 1 > /sys/class/gpio/gpio23/value");
+		system("echo 0 > /sys/class/gpio/gpio23/value");
+	}
+	system("echo 1 > /sys/class/gpio/gpio69/value");
 
 ?>
 
@@ -51,7 +51,7 @@
 		<br>
 		<div class="row" style="font-size: 1.5em;">
 			<nav class="col-md-6">
-				<a href="PasaAlto1.html" style="margin-left: 1em;">Atrás</a>
+				<a href="PasaAlto10.php" style="margin-left: 1em;">Atrás</a>
 			</nav>
 			<nav class="col-md-6 text-right">
 				<a href="index.html" style="margin-right: 1em;">Página principal</a>

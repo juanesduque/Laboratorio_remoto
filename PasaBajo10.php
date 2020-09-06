@@ -1,3 +1,13 @@
+<?php
+
+	system("echo out > /sys/class/gpio/gpio4/direction");
+	system("echo out > /sys/class/gpio/gpio15/direction");
+	system("echo out > /sys/class/gpio/gpio14/direction");
+	system("echo 1 > /sys/class/gpio/gpio4/value");
+	system("echo 1 > /sys/class/gpio/gpio15/value");
+	system("echo 0 > /sys/class/gpio/gpio14/value");
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,29 +20,28 @@
 	<body>
 		<div class="row">
 			<div class="col-md-12 text-center">
-				<h1 class="Pt-serif grande">Filtro pasa bajo de segundo orden</h1>
+				<h1 class="Pt-serif grande">Filtro pasa bajo de primer orden</h1>
 			</div>
 		</div>
 		<div class="row espacio-arriba">
 			<div class="col-md-6 text-right">
-				<img src="Im/PasaBajo2.png" class="borde-img" style="width: 600px; height: 350px;">
+				<img src="Im/PasaBajo1.jpg" class="borde-img" style="width: 600px; height: 350px;">
 			</div>
 			<div class="col-md-6 text-center">
-				<form action="PasaBajo2.php" method="get" name="res">
-					<br><br>
+				<form action="PasaBajo1.php" method="get" name="res">
+					<br><br><br>
 					<label for="R1" class="letra"><strong>R1(k&#8486;):&nbsp;&nbsp;</strong></label>
-  					<input type="text" id="R1" name="R1" class="borde-boton" size="30"><br><br>
-  					<label for="R2" class="letra"><strong>R2(k&#8486;):&nbsp;&nbsp;</strong></label>
-					<input type="text" id="R2" name="R2" class="borde-boton" size="30"><br><br>
+					<input type="text" id="R1" name="R1" class="borde-boton" size="30"><br><br>
 					<label for="frecuencia" class="letra"><strong>F(Hz):&nbsp;&nbsp;</strong></label>
 					<input type="text" name="frecuencia" class="borde-boton" size="30"><br><br>
-					<input type="submit" class="borde-boton" style="width: 90px; height: 40px">
+					<input type="submit" class="borde-boton" style="width: 90px; height: 40px">  
 				</form>
 			</div>
 		</div>
-		<div class="row espacio-arriba">
+		<br><br>
+		<div class="row">
 			<nav class="col-md-6">
-				<a href="PasaBajo.html" class="espacio-izquierda">Atrás</a>
+				<a href="PasaBajo.php" class="espacio-izquierda">Atrás</a>
 			</nav>
 			<nav class="col-md-6 text-right">
 				<a href="index.html" class="espacio-izquierda">Página Principal &nbsp;&nbsp;</a>
